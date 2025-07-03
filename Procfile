@@ -1,3 +1,1 @@
-git add requirements.txt
-git commit -m "Add gunicorn to requirements.txt"
-git push origin main # or your branch name
+web: gunicorn --bind 0.0.0.0:$PORT app:app
