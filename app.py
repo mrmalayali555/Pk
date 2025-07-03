@@ -6,11 +6,11 @@ from playwright_script import run_booking
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'user_data'
 
-# --- ADDED LINES START ---
+# --- START OF IMPORTANT ADDED CODE ---
 # Create the upload folder if it doesn't exist
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
-# --- ADDED LINES END ---
+# --- END OF IMPORTANT ADDED CODE ---
 
 @app.route("/", methods=["GET", "POST"])
 def index():
